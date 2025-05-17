@@ -1,0 +1,317 @@
+:root {
+    --primary-color: #ff8a00;
+    --secondary-color: #e53935;
+    --accent-color: #2196f3;
+    --light-bg: #f9f7f3;
+    --dark-bg: #333333;
+    --text-color: #333333;
+    --text-light: #ffffff;
+    --card-bg: #ffffff;
+    --card-highlight: #fff8e1;
+    --border-color: #ddd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    background-image: linear-gradient(120deg, rgba(255,245,230,0.7) 0%, rgba(255,255,255,0.7) 100%), url('../images/palm-bg.svg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1587440871875-191322ee64b0');
+    background-size: cover;
+    background-position: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 8rem 2rem;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, rgba(255,138,0,0.5) 0%, rgba(229,57,53,0.5) 100%);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+    font-weight: 400;
+}
+
+.location {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+.location a {
+    color: var(--text-light);
+    text-decoration: none;
+    border-bottom: 1px dotted rgba(255,255,255,0.5);
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+}
+
+.location a:hover {
+    border-bottom: 1px solid rgba(255,255,255,1);
+}
+
+.nav-container {
+    background-color: var(--dark-bg);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-item {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.section {
+    margin-bottom: 4rem;
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 2rem;
+}
+
+.section h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.day-card {
+    background-color: var(--card-bg);
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    overflow: hidden;
+    border-left: 5px solid var(--accent-color);
+}
+
+.day-card.highlight {
+    border-left: 5px solid var(--primary-color);
+    background-color: var(--card-highlight);
+}
+
+.day-card h3 {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.highlight h3 {
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+}
+
+.day-content {
+    padding: 1.5rem;
+}
+
+.event {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+}
+
+.event:last-child {
+    margin-bottom: 0;
+}
+
+.time {
+    min-width: 100px;
+    font-weight: 600;
+    color: var(--accent-color);
+}
+
+.highlight .time {
+    color: var(--secondary-color);
+}
+
+.event-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.event a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.event a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.menu-title {
+    font-weight: 600;
+    font-style: italic;
+    margin: 0.5rem 0;
+}
+
+.menu-items, .packing-list, .vehicles-list, .sleeping-list, .flex-list {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.menu-items li, .packing-list li, .vehicles-list li, .sleeping-list li, .flex-list li {
+    margin-bottom: 0.5rem;
+}
+
+.sleeping-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.sleeping-section {
+    margin-bottom: 2rem;
+}
+
+.sleeping-section h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.excited {
+    margin-top: 2rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.expenses {
+    background-color: var(--light-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.expenses p {
+    margin-bottom: 1rem;
+}
+
+.note {
+    font-style: italic;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .header {
+        padding: 6rem 1rem;
+    }
+    
+    .event {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .time {
+        min-width: auto;
+    }
+    
+    .sleeping-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-item {
+        padding: 0.75rem 1rem;
+    }
+}
