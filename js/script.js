@@ -37,4 +37,39 @@ document.addEventListener('DOMContentLoaded', function() {
                 'var(--primary-color)' : 'var(--text-light)';
         });
     });
+    
+    // Menu image modal functionality
+    const menuImage = document.getElementById('menuImage');
+    const menuModal = document.getElementById('menuModal');
+    const menuModalImg = document.getElementById('menuModalImg');
+    const menuClose = document.querySelector('.menu-close');
+    
+    if (menuImage && menuModal && menuModalImg) {
+        // Open modal when clicking the menu image
+        menuImage.addEventListener('click', function() {
+            menuModal.style.display = 'flex';
+            menuModalImg.src = this.src;
+        });
+        
+        // Close modal when clicking the X
+        if (menuClose) {
+            menuClose.addEventListener('click', function() {
+                menuModal.style.display = 'none';
+            });
+        }
+        
+        // Close modal when clicking outside the image
+        menuModal.addEventListener('click', function(e) {
+            if (e.target === menuModal) {
+                menuModal.style.display = 'none';
+            }
+        });
+        
+        // Close modal with escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && menuModal.style.display === 'flex') {
+                menuModal.style.display = 'none';
+            }
+        });
+    }
 });

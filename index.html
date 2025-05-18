@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evan's Birthday Bash - Palm Springs!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌵</text></svg>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -79,16 +80,18 @@
                         <span class="time">Afternoon</span>
                         <div class="event-details">
                             <p class="event-title">Pool Hang or Optional Hike Nearby</p>
+                            <p><i class="fas fa-hiking"></i> <a href="https://www.google.com/maps/place/Herb+Jeffries+Trailhead/@33.7141975,-116.4009744,18.7z/data=!4m15!1m8!3m7!1s0x80dafe1203a9e32b:0x573e64242694cd7a!2s45835+Edgehill+Dr,+Palm+Desert,+CA+92260!3b1!8m2!3d33.7134011!4d-116.4015125!16s%2Fg%2F11c4tfvym0!3m5!1s0x80daffa2ee661fe3:0x3f22e428badcb72e!8m2!3d33.7142507!4d-116.4003986!16s%2Fg%2F11f6dqhw5h?entry=ttu" target="_blank">Herb Jeffries Trailhead</a> - Just a 2-minute walk from the house!</p>
                             <p>Option for poolside massages: <a href="https://www.bookmoonstone.com/" target="_blank">Moonstone Mobile Massage</a> (book if you want)</p>
                         </div>
                     </div>
                     
                     <div class="event">
-                        <span class="time">5:45 PM</span>
+                        <span class="time">5:00 PM</span>
                         <div class="event-details">
-                            <p class="event-title">Dinner Out</p>
+                            <p class="event-title">Leave for Dinner Out</p>
                             <p><a href="https://www.workshopkitchenbar.com/#menu" target="_blank">Workshop Kitchen + Bar</a></p>
-                            <p>800 N Palm Canyon Dr, Palm Springs, CA 92262</p>
+                            <p><a href="https://www.google.com/maps/place/Workshop+Kitchen+%26+Bar/data=!4m2!3m1!1s0x0:0xbebedb15a6ebbb96?sa=X&ved=1t:2428&ictx=111" target="_blank"><i class="fas fa-map-marker-alt"></i> 800 N Palm Canyon Dr, Palm Springs, CA 92262</a></p>
+                            <p><i class="fas fa-car"></i> <em>Approximately 30 minute drive from the house</em></p>
                         </div>
                     </div>
                 </div>
@@ -105,14 +108,12 @@
                     </div>
                     
                     <div class="event">
-                        <span class="time">10:30 AM - 2:30 PM</span>
+                        <span class="time">10:30 AM - 12:30 PM</span>
                         <div class="event-details">
                             <p class="event-title">Massages @ House</p>
                             <ul>
-                                <li>10:30 AM - Evan</li>
-                                <li>11:30 AM - Bil</li>
-                                <li>12:30 PM - Mindy</li>
-                                <li>1:30 PM - Alex</li>
+                                <li>10:30 AM - Evan & Alex (simultaneous sessions)</li>
+                                <li>11:30 AM - Bil & Mindy (simultaneous sessions)</li>
                             </ul>
                         </div>
                     </div>
@@ -122,7 +123,17 @@
                         <div class="event-details">
                             <p class="event-title">Private Chef Dinner at the House 🍽️</p>
                             <p>(Mediterranean)</p>
+                            <div class="menu-container">
+                                <img src="images/menu-small.jpg" alt="Birthday Dinner Menu" class="menu-image" id="menuImage">
+                                <span class="enlarge-text"><i class="fas fa-search-plus"></i> Click to enlarge</span>
+                            </div>
                         </div>
+                    </div>
+                    
+                    <!-- Menu Modal -->
+                    <div id="menuModal" class="menu-modal">
+                        <span class="menu-close">&times;</span>
+                        <img class="menu-modal-content" id="menuModalImg">
                     </div>
                     
                     <div class="event">
@@ -150,9 +161,8 @@
                         <div class="event-details">
                             <p class="event-title">Pool Time / Free Day</p>
                             <ul>
-                                <li>Massages: Adam, Zoe, Ben, maybe Chelsea</li>
+                                <li>Massages: Adam, Zoe, Ben, Brett</li>
                                 <li>Pool</li>
-                                <li>Book a massage to come to the house</li>
                                 <li>Shopping</li>
                                 <li>Hiking (<a href="https://www.google.com/maps/place/Herb+Jeffries+Trailhead/" target="_blank">nearby trailhead</a> - 2 minute walk from house)</li>
                                 <li>Explore Joshua Tree</li>
@@ -169,7 +179,7 @@
                                 <li>Fancy toppings bar (avocado, pickled onions, chipotle aioli, cheddar)</li>
                                 <li>Pasta salad (orzo, lemon, herbs)</li>
                                 <li>Grilled pineapple or peaches for dessert</li>
-                                <li>Wine spritzers or retro punch</li>
+                                <li>Wine spritzers</li>
                             </ul>
                         </div>
                     </div>
@@ -192,8 +202,10 @@
                         <div class="event-details">
                             <p class="event-title">Morning Options</p>
                             <ul>
-                                <li>Brunch at FARM 🍳 (6 La Plaza, Palm Springs, CA 92262)</li>
-                                <li>Morning golf (no current tee time)</li>
+                                <li>Brunch at <a href="https://farmpalmsprings.com/" target="_blank">FARM</a> 🍳
+                                    <p><a href="https://maps.app.goo.gl/WYVDe1Bmxa8VnrgV7" target="_blank"><i class="fas fa-map-marker-alt"></i> 6 La Plaza, Palm Springs, CA 92262</a></p>
+                                    <p><i class="fas fa-car"></i> <em>Approximately 30 minute drive from the house</em></p>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -204,6 +216,7 @@
                             <p class="event-title">Afternoon Options</p>
                             <ul>
                                 <li><a href="https://palmspringsairmuseum.org/memorial-day-flower-drop/" target="_blank">Flower Drop event at Air Museum</a> ✈️ @ 1PM</li>
+                                <li>Golf (no current tee time) ⛳</li>
                                 <li>Shopping 🛍️☀️</li>
                                 <li>Joshua Tree (1 hour away)</li>
                             </ul>
@@ -283,10 +296,10 @@
                 <div class="sleeping-section">
                     <h3>Private Rooms:</h3>
                     <ol class="sleeping-list">
-                        <li><strong>Evan & Zoe – Primary King Suite</strong>, bc birthday privileges!</li>
-                        <li><strong>Alex – King</strong> (Brett & Jenny's room Sunday night)</li>
+                        <li><strong>Evan & Zoe – Primary King Suite</strong></li>
+                        <li><strong>Alex – King</strong> Brett & Jenny's room Sunday night</li>
                         <li><strong>Adam & Chelsea – King</strong></li>
-                        <li><strong>Andrew & Shane (Thurs & Fri only) – King</strong></li>
+                        <li><strong>Andrew - King</strong> - shares with Shane (Thurs & Fri only)</li>
                         <li><strong>Kate – Queen</strong> – rotates w/ Ali or Jackie (Jackie or Ali sleep here with Kate on Sunday night)</li>
                         <li><strong>Ali & Jackie – King</strong> – rotates w/ Kate for a solo night (Alex sleeps here Sunday night)</li>
                         <li><strong>Ben – Queen</strong> – rotates with Brett & Jenny ❤ Saturday night.</li>
@@ -318,9 +331,10 @@
             <h2>Expenses</h2>
             <div class="expenses">
                 <p><strong>House:</strong> $650/person*</p>
-                <p><strong>Food:</strong> (tbd)</p>
+                <p><strong>Food & Drinks:</strong> (tbd)</p>
                 <p><strong>Venmo:</strong> <a href="https://venmo.com/u/bugzoe" target="_blank">@bugzoe</a></p>
-                <p class="note">*send what you can while also quietly accepting additional funds for those who want a greater contribution.</p>
+		<p class="note">*send what you can.</p>
+		<p class="note">*quietly accepting additional funds for those who want a greater contribution.</p>
             </div>
         </section>
     </div>
