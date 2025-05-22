@@ -370,6 +370,67 @@ h1 {
     opacity: 0.8;
 }
 
+/* Collapsible sections */
+.collapsible {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-weight: 600;
+    border-radius: 4px;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.collapsible:hover {
+    background-color: rgba(255, 138, 0, 0.1);
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.collapsible-content {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: var(--card-bg);
+    border-radius: 0 0 4px 4px;
+}
+
+.collapsible-inner {
+    padding: 10px 15px;
+}
+
+.recipe-section {
+    margin-bottom: 15px;
+    margin-left: 5px;
+}
+
+.recipe-title {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+
+.collapsible-inner ul {
+    padding-left: 20px;
+}
+
 footer {
     background-color: var(--dark-bg);
     color: var(--text-light);
